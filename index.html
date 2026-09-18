@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS Student Community Day</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Decorative background -->
+<div class="cloud cloud1">☁</div>
+<div class="cloud cloud2">☁</div>
+<div class="sparkle sparkle1">✦</div>
+<div class="sparkle sparkle2">✧</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+  <a href="#home" class="logo">
+    <span>☁</span>
+    AWS <b>Student Day</b>
+  </a>
+
+  <div class="nav-links">
+    <a href="#sessions">Sessions</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#speakers">Speakers</a>
+    <a href="#journey">Journey</a>
+  </div>
+
+  <button class="register-btn" onclick="openModal()">
+    Register ↗
+  </button>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-text">
+
+    <div class="eyebrow">
+      ✦ BUILT FOR STUDENTS • CLOUD • COMMUNITY
+    </div>
+
+    <h1>
+      Your cloud
+      <br>
+      <span>adventure</span>
+      <br>
+      starts here.
+    </h1>
+
+    <p>
+      One day to explore AWS, meet builders, discover career paths
+      and leave with something you can actually build.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#sessions" class="primary-btn">
+        Explore sessions →
+      </a>
+
+      <button class="secondary-btn" onclick="openModal()">
+        I'm joining ✦
+      </button>
+
+    </div>
+
+    <div class="stats">
+
+      <div>
+        <strong>12+</strong>
+        <small>Sessions</small>
+      </div>
+
+      <div>
+        <strong>8</strong>
+        <small>Speakers</small>
+      </div>
+
+      <div>
+        <strong>1</strong>
+        <small>Big day</small>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- TECH ART -->
+  <div class="hero-art">
+
+    <div class="orbit"></div>
+
+    <div class="terminal">
+
+      <div class="terminal-top">
+        <span>●</span>
+        <span>●</span>
+        <span>●</span>
+      </div>
+
+      <p>
+        <b>student@aws</b>:~$ build --future
+      </p>
+
+      <p class="green">
+        ✓ cloud skills loaded
+      </p>
+
+      <p class="green">
+        ✓ community connected
+      </p>
+
+      <p class="green">
+        ✓ ideas = shipping
+      </p>
+
+      <p class="typing">
+        _
+      </p>
+
+    </div>
+
+    <div class="sticker sticker-one">
+      ☁ build stuff
+    </div>
+
+    <div class="sticker sticker-two">
+      ♡ learn + meet
+    </div>
+
+    <div class="next-card">
+      ⚡ <b>Next up</b>
+      <br>
+      <small>Cloud 101 · 10:30 AM</small>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- STUDENT JOURNEY -->
+<section class="section" id="journey">
+
+  <div class="section-label">
+    01 / YOUR DAY
+  </div>
+
+  <h2>
+    From “what is this?”
+    <br>
+    to <span>“I built this.”</span>
+  </h2>
+
+  <div class="journey">
+
+    <div class="journey-line"></div>
+
+    <div class="journey-step active">
+      <i>01</i>
+      <b>Discover</b>
+      <small>Find what sparks you</small>
+    </div>
+
+    <div class="journey-step">
+      <i>02</i>
+      <b>Decide</b>
+      <small>Pick your sessions</small>
+    </div>
+
+    <div class="journey-step">
+      <i>03</i>
+      <b>Register</b>
+      <small>Save your spot</small>
+    </div>
+
+    <div class="journey-step">
+      <i>04</i>
+      <b>Prepare</b>
+      <small>Know before you go</small>
+    </div>
+
+    <div class="journey-step">
+      <i>05</i>
+      <b>Attend</b>
+      <small>Learn + connect</small>
+    </div>
+
+    <div class="journey-step">
+      <i>06</i>
+      <b>Continue</b>
+      <small>Keep building</small>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SESSIONS -->
+<section class="section" id="sessions">
+
+  <div class="section-header">
+
+    <div>
+      <div class="section-label">
+        02 / EXPLORE
+      </div>
+
+      <h2>
+        Find your <span>thing.</span>
+      </h2>
+    </div>
+
+    <p>
+      Not sure where to start?
+      Choose what you're curious about.
+    </p>
+
+  </div>
+
+
+  <!-- FILTERS -->
+  <div class="filters">
+
+    <button class="filter active" data-filter="all">
+      All
+    </button>
+
+    <button class="filter" data-filter="cloud">
+      ☁ Cloud
+    </button>
+
+    <button class="filter" data-filter="ai">
+      ✦ AI
+    </button>
+
+    <button class="filter" data-filter="career">
+      ⌁ Career
+    </button>
+
+    <button class="filter" data-filter="security">
+      ◈ Security
+    </button>
+
+  </div>
+
+
+  <!-- SEARCH -->
+  <div class="search-box">
+    🔍
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Search sessions..."
+    >
+  </div>
+
+
+  <div class="session-grid" id="sessionGrid">
+
+
+    <!-- CARD 1 -->
+    <article class="session-card" data-category="cloud">
+
+      <div class="card-top">
+        <span class="tag orange">
+          BEGINNER
+        </span>
+
+        <span>
+          10:30 AM
+        </span>
+      </div>
+
+      <div class="session-icon">
+        ☁
+      </div>
+
+      <h3>
+        Cloud 101:
+        Your First AWS Adventure
+      </h3>
+
+      <p>
+        Understand the cloud without
+        the confusing jargon.
+      </p>
+
+      <div class="card-bottom">
+
+        <span>
+          45 min · Hall A
+        </span>
+
+        <button onclick="addToDay(this)">
+          ＋ Add to My Day
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- CARD 2 -->
+    <article class="session-card" data-category="ai">
+
+      <div class="card-top">
+        <span class="tag purple">
+          BUILD
+        </span>
+
+        <span>
+          11:30 AM
+        </span>
+      </div>
+
+      <div class="session-icon">
+        ✦
+      </div>
+
+      <h3>
+        Build Your
+        First AI App
+      </h3>
+
+      <p>
+        Turn an idea into a tiny
+        working AI experience.
+      </p>
+
+      <div class="card-bottom">
+
+        <span>
+          60 min · Lab 1
+        </span>
+
+        <button onclick="addToDay(this)">
+          ＋ Add to My Day
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- CARD 3 -->
+    <article class="session-card" data-category="career">
+
+      <div class="card-top">
+        <span class="tag blue">
+          CAREER
+        </span>
+
+        <span>
+          1:30 PM
+        </span>
+      </div>
+
+      <div class="session-icon">
+        ⌁
+      </div>
+
+      <h3>
+        From Student
+        to Cloud Builder
+      </h3>
+
+      <p>
+        Projects, communities and
+        skills that help you get started.
+      </p>
+
+      <div class="card-bottom">
+
+        <span>
+          40 min · Hall B
+        </span>
+
+        <button onclick="addToDay(this)">
+          ＋ Add to My Day
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- CARD 4 -->
+    <article class="session-card" data-category="security">
+
+      <div class="card-top">
+        <span class="tag green">
+          EXPLORE
+        </span>
+
+        <span>
+          3:00 PM
+        </span>
+      </div>
+
+      <div class="session-icon">
+        ◈
+      </div>
+
+      <h3>
+        Think Like a
+        Cloud Security Pro
+      </h3>
+
+      <p>
+        Learn the basics of keeping
+        cloud applications safe.
+      </p>
+
+      <div class="card-bottom">
+
+        <span>
+          45 min · Hall A
+        </span>
+
+        <button onclick="addToDay(this)">
+          ＋ Add to My Day
+        </button>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- MY DAY -->
+<section class="my-day">
+
+  <div>
+
+    <div class="section-label">
+      YOUR PERSONAL GUIDE
+    </div>
+
+    <h2>
+      Your day,
+      <span>your way.</span>
+    </h2>
+
+    <p>
+      Build a mini schedule from the sessions
+      you actually want to attend.
+    </p>
+
+  </div>
+
+  <div class="day-preview">
+
+    <div class="day-top">
+      <b>MY DAY</b>
+      <span id="count">
+        0 sessions
+      </span>
+    </div>
+
+    <div id="myDayList">
+
+      <div class="empty-day">
+        ✦
+        <br>
+        Add a session to start building your day.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SCHEDULE -->
+<section class="section schedule-section" id="schedule">
+
+  <div class="section-label">
+    03 / SCHEDULE
+  </div>
+
+  <h2>
+    A day that feels
+    <span>yours.</span>
+  </h2>
+
+  <div class="timeline">
+
+    <div class="timeline-time">
+      10:00
+      <small>AM</small>
+    </div>
+
+    <div class="timeline-dot"></div>
+
+    <div class="timeline-card">
+      <span>WELCOME</span>
+
+      <h3>
+        Check in & meet the community
+      </h3>
+
+      <p>
+        Lobby · Grab your badge + say hi 👋
+      </p>
+    </div>
+
+
+    <div class="timeline-time">
+      10:30
+      <small>AM</small>
+    </div>
+
+    <div class="timeline-dot active-dot"></div>
+
+    <div class="timeline-card selected">
+      <span>☁ CLOUD</span>
+
+      <h3>
+        Cloud 101:
+        Your First AWS Adventure
+      </h3>
+
+      <p>
+        Hall A · 45 min
+        <b>Next up</b>
+      </p>
+    </div>
+
+
+    <div class="timeline-time">
+      11:30
+      <small>AM</small>
+    </div>
+
+    <div class="timeline-dot"></div>
+
+    <div class="timeline-card">
+
+      <span>✦ AI</span>
+
+      <h3>
+        Build Your First AI App
+      </h3>
+
+      <p>
+        Lab 1 · 60 min
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SPEAKERS -->
+<section class="section" id="speakers">
+
+  <div class="section-label">
+    04 / PEOPLE
+  </div>
+
+  <h2>
+    Meet the <span>builders.</span>
+  </h2>
+
+  <div class="speaker-grid">
+
+    <div class="speaker-card">
+
+      <div class="avatar orange-bg">
+        👩🏽‍💻
+      </div>
+
+      <h3>
+        Cloud Community
+      </h3>
+
+      <p>
+        AWS Community Builder
+      </p>
+
+      <span>
+        ☁ Cloud
+      </span>
+
+    </div>
+
+
+    <div class="speaker-card">
+
+      <div class="avatar purple-bg">
+        👨🏾‍💻
+      </div>
+
+      <h3>
+        AI Builder
+      </h3>
+
+      <p>
+        Developer & Creator
+      </p>
+
+      <span>
+        ✦ AI
+      </span>
+
+    </div>
+
+
+    <div class="speaker-card">
+
+      <div class="avatar blue-bg">
+        👩🏻‍💻
+      </div>
+
+      <h3>
+        Career Mentor
+      </h3>
+
+      <p>
+        Tech & Community
+      </p>
+
+      <span>
+        ⌁ Career
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+
+  <div class="cta-doodles">
+    ✦ ☁ ✦
+  </div>
+
+  <div>
+
+    <div class="section-label">
+      READY?
+    </div>
+
+    <h2>
+      Bring your curiosity.
+      <br>
+      We'll bring the cloud.
+    </h2>
+
+  </div>
+
+  <button
+    class="primary-btn"
+    onclick="openModal()"
+  >
+    Register for the day ↗
+  </button>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <span>
+    ☁ AWS Student Community Day
+  </span>
+
+  <span>
+    Made for curious builders · 2026
+  </span>
+
+</footer>
+
+
+<!-- TOAST -->
+<div id="toast" class="toast">
+  ✓ Added to your day!
+</div>
+
+
+<!-- REGISTRATION MODAL -->
+<div id="modal" class="modal">
+
+  <div class="modal-box">
+
+    <button
+      class="close"
+      onclick="closeModal()"
+    >
+      ×
+    </button>
+
+    <div class="section-label">
+      YOUR SPOT
+    </div>
+
+    <h2>
+      You're <span>in?</span> ✦
+    </h2>
+
+    <p>
+      Tell us a little about yourself
+      and we'll save your place.
+    </p>
+
+    <form id="registerForm">
+
+      <input
+        type="text"
+        placeholder="Your name"
+        required
+      >
+
+      <input
+        type="email"
+        placeholder="Your email"
+        required
+      >
+
+      <select>
+        <option>I'm new to AWS</option>
+        <option>I've explored AWS</option>
+        <option>I'm already building</option>
+      </select>
+
+      <button
+        class="primary-btn"
+        type="submit"
+      >
+        Confirm my spot →
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
